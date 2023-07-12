@@ -117,7 +117,7 @@ else:
     st.write('### Resource')
     df1=pd.read_excel('resource.xlsx')
     topic=pd.DataFrame()
-    for j in unkonwn:
+    for j in unknown:
         st.write(j)
         topic.append(df1[df1['topic']==i],ignore_index=True)
         st.DataFrame(topic)
