@@ -40,8 +40,7 @@ def gap_analysis(Aspiration:str,data,required_skills):
             else:
                 x.append(k)
                 p+=required_skills[data['Aspiration'].to_list()[0]][i][k]
-    st.write(p)
-    st.write(x)
+    return p,x
 
 def known(data,required_skills):
     o=[]
@@ -53,7 +52,11 @@ def known(data,required_skills):
                     o.append(k)
     return o
 
-gap_analysis('data',df,required_skills)
+weight,unknown=gap_analysis('data',df,required_skills)
+weight=(weight-100)/10
+
+
+
 
 
 
