@@ -103,5 +103,8 @@ ax.legend()
 
 st.pyplot(fig)
 
-st.write(weight)
-
+if(weight1==0):
+    st.write('Congralutions you have achieved your goal')
+else:
+    weight2=abs(weight1-100)
+    st.write(f'You have completed {weight2} foot steps more {weight1} foot steps to reach goal')
