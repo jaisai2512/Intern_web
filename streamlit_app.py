@@ -53,7 +53,7 @@ def known(data,required_skills):
     return o
 
 weight,unknown=gap_analysis('data',df,required_skills)
-weight=(weight-100)/10
+weight=abs((weight-100))/10
 
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
