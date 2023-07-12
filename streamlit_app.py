@@ -51,7 +51,7 @@ weight,unknown=gap_analysis('data',df,required_skills)
 weight1=weight
 weight=abs((weight-100))/10
 
-st.markdown('### Report')
+st.markdown('## Report')
 col1, col2= st.columns(2)
 col1.metric("Name", df['Name'][0])
 col2.metric("Reg_No", df['Reg_no'][0])
@@ -100,7 +100,7 @@ ax.imshow(mario_block_img, extent=[mario_position-0.40, mario_position + 0.90, -
 # Add a legend
 ax.legend()
 
-st.markdown('## Where I Stand')
+st.markdown('### Where I Stand')
 
 st.pyplot(fig)
 
