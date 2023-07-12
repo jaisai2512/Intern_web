@@ -5,3 +5,6 @@ import plotly.express as px
 
 st.sidebar.header('Input here')
 user_input = st.sidebar.text_input("Enter Register No:")
+
+df=pd.read_excel('intern21.xlsx')
+st.write(df)
