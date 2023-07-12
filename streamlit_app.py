@@ -116,5 +116,9 @@ else:
         st.write(f'{count}.{i}')
     st.write('### Resource')
     df1=pd.read_excel('resource.xlsx')
-    st.write(df1[df1['Topic']=='DNS'])
+    topic=pd.DataFrame()
+    for j in unkonwn:
+        st.write(j)
+        topic.append(df1[df1['topic']==i],ignore_index=True)
+        st.DataFrame(topic)
     
