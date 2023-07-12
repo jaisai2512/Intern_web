@@ -115,6 +115,6 @@ else:
         count+=1
         st.write(f'{count}.{i}')
     st.write('### Resource')
-    df1=pd.read_exceel('resource.xlsx')
+    df1=pd.read_excel('resource.xlsx')
     st.write(df1[df1['topic']=='DNS'])
     
