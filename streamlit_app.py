@@ -55,8 +55,46 @@ def known(data,required_skills):
 weight,unknown=gap_analysis('data',df,required_skills)
 weight=(weight-100)/10
 
+import matplotlib.pyplot as plt
+import matplotlib.image as mpimg
 
+# Create the plot with increased frame size
+fig, ax = plt.subplots(figsize=(16, 10))
+image = mpimg.imread('image.jpg')
 
+# Define the coordinates for the line up to the Mario block image
+x_line = [0, weight]
+y_line = [0, 0]
+
+# Plot the line up to the Mario block image with markers and a pleasing line style
+ax.plot(x_line, y_line, color='blue', linewidth=1, linestyle='--', marker='*', markersize=6, markeredgecolor='black', markeredgewidth=1, label='Line')
+ax.imshow(image)
+# Remove ticks and labels on the y-axis
+ax.set_yticks([])
+ax.set_ylabel('')
+
+# Remove the outline box (spines) around the plot
+ax.spines['top'].set_visible(False)
+ax.spines['right'].set_visible(False)
+ax.spines['left'].set_visible(False)
+
+# Set the x-axis limits
+ax.set_xlim(0,10)
+
+# Set labels and title
+ax.set_xlabel('Where you Stand')
+
+# Load the Mario block image
+mario_block_img = plt.imread('mario_block.png')  # Replace 'mario_block.png' with the actual path to the Mario block image
+
+# Plot the Mario block image at the desired position
+mario_position = x_line[1]  # The position along the x-axis where the Mario block image will be placed
+ax.imshow(mario_block_img, extent=[mario_position-0.40, mario_position + 0.90, -0.110, 0.99])
+
+# Add a legend
+ax.legend()
+
+st.write(aX)
 
 
 
