@@ -10,7 +10,7 @@ df=pd.read_excel('intern21.xlsx')
 st.write(df)
 
 st.markdown('### Report')
-  col1, col2= st.columns(2)
-  col1.metric("Name", df['Name'])
-  col2.metric("Reg_No", df['Reg_no'])
+col1, col2= st.columns(2)
+col1.metric("Name", df['Name'])
+col2.metric("Reg_No", df['Reg_no'])
   
