@@ -100,6 +100,8 @@ ax.imshow(mario_block_img, extent=[mario_position-0.40, mario_position + 0.90, -
 # Add a legend
 ax.legend()
 
+st.markdown('## Where I Stand')
+
 st.pyplot(fig)
 
 if(weight1==0):
