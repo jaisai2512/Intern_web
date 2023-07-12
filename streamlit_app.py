@@ -109,8 +109,12 @@ if(weight1==0):
 else:
     weight2=abs(weight1-100)
     st.write(f'You have completed {weight2} foot steps more {weight1} foot steps to reach goal')
-    st.write('## Topics to cover')
+    st.write('### Topics to cover')
     count=0
     for i in unknown:
         count+=1
         st.write(f'{count}.{i}')
+    st.write('### Resource')
+    df1=pd.read_exceel('resource.xlsx')
+    st.write(df1[df1['topic']=='DNS'])
+    
