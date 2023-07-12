@@ -21,7 +21,7 @@ col4.metric("Gender", df['Gender'][0])
 required_skills = {"Cloud Computing":{
     "Cloud_Platforms":{"AWS":1,"AZURE": 2,"GCP": 1},
     "Networking fundamentals":{"TCP/IP":1,"DNS": 2,"Load balancing":5,"VPN":5 },
-    "OS":{"Linux":4, "Windows":5},
+    "OS":{"Linux":4, "Windows":5}, 
     "Automation & Scripting":{"Python":2,"Powershell":3,"Bash":4},
     "IAC":{"Terraform":1 ,"AWS cloud formation":2},
     "Containerization":{"Docker":1,"Kubernetes":2},
