@@ -96,5 +96,5 @@ ax.legend()
 
 st.pyplot(fig)
 
-
+st.write(weight)
 
