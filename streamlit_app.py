@@ -57,6 +57,31 @@ required_skills = {"Cloud Computing":{
     "Softskills":{"Effective communication":1,"Teamwork":1,"Collaboration skills":1}
 }}
 
+def gap_analysis(Aspiration:str,data,required_skills):
+    x=[]
+    p=0
+    known_skills=known(data,required_skills)
+    for i in required_skills[data['Aspiration'].to_list()[0]]:
+        for k,l in required_skills[data['Aspiration'].to_list()[0]][i].items():
+            if k in known_skills:
+                 print(k)
+            else:
+                x.append(k)
+                p+=required_skills[data['Aspiration'].to_list()[0]][i][k]
+    return p,x
+
+def known(data,required_skills):
+    o=[]
+    for i,j in required_skills[data['Aspiration'].to_list()[0]].items():
+        for k in data[i].to_list():
+                if(',' in k):
+                    o=o+k.split(',')
+                else:
+                    o.append(k)
+    return o
+
+weight,unknown=gap_analysis('data',df,required_skills)
+weight=abs((weight-100))/10
 
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
