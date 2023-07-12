@@ -60,15 +60,14 @@ import matplotlib.image as mpimg
 
 # Create the plot with increased frame size
 fig, ax = plt.subplots(figsize=(16, 10))
-image = mpimg.imread('image.jpg')
+
 
 # Define the coordinates for the line up to the Mario block image
 x_line = [0, weight]
 y_line = [0, 0]
 
 # Plot the line up to the Mario block image with markers and a pleasing line style
-ax.plot(x_line, y_line, color='blue', linewidth=1, linestyle='--', marker='*', markersize=6, markeredgecolor='black', markeredgewidth=1, label='Line')
-ax.imshow(image)
+ax.plot(x_line, y_line, color='blue', linewidth=1, linestyle='-', marker='*', markersize=6, markeredgecolor='black', markeredgewidth=1, label='Line')
 # Remove ticks and labels on the y-axis
 ax.set_yticks([])
 ax.set_ylabel('')
