@@ -118,5 +118,5 @@ else:
     df1=pd.read_excel('resource.xlsx')
     for j in unknown:
         topic=df1[df1['Topic']==j]
-        st.dataframe(topic)
+        st.write(topic)
     
