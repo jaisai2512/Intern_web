@@ -29,7 +29,7 @@ required_skills = {"Cloud Computing":{
     "Softskills":{"Effective communication":1,"Teamwork":1,"Collaboration skills":1}
 }}
 
-def gap_analysis(Aspiration:str,data,required_skills,known_skills):
+def gap_analysis(Aspiration:str,data,required_skills):
     x=[]
     p=0
     known_skills=known(data,required_skills)
@@ -53,7 +53,7 @@ def known(data,required_skills):
                     o.append(k)
     return o
 
-gap_analysis('data',df,required_skills,known_skills)
+gap_analysis('data',df,required_skills)
 
 
 
