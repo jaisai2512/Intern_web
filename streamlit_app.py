@@ -22,6 +22,7 @@ user_input = st.sidebar.text_input("Enter Register No:")
 df=pd.read_excel('intern21.xlsx')
 
 if user_input :
+    user_input=int(user_input)
     df=df[df['Reg_no']==user_input]
     def gap_analysis(Aspiration:str,data,required_skills):
         x=[]
