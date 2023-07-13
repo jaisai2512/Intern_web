@@ -26,17 +26,17 @@ df=pd.read_excel('intern21.xlsx')
 if(user_input != ' '):
     df=df[df['Reg_no']==user_input]
     def gap_analysis(Aspiration:str,data,required_skills):
-    x=[]
-    p=0
-    known_skills=known(data,required_skills)
-    for i in required_skills[data['Aspiration'].to_list()[0]]:
-        for k,l in required_skills[data['Aspiration'].to_list()[0]][i].items():
-            if k in known_skills:
-                 print(k)
-            else:
-                x.append(k)
-                p+=required_skills[data['Aspiration'].to_list()[0]][i][k]
-    return p,x
+        x=[]
+        p=0
+        known_skills=known(data,required_skills)
+        for i in required_skills[data['Aspiration'].to_list()[0]]:
+            for k,l in required_skills[data['Aspiration'].to_list()[0]][i].items():
+                if k in known_skills:
+                     print(k)
+                else:
+                    x.append(k)
+                    p+=required_skills[data['Aspiration'].to_list()[0]][i][k]
+        return p,x
 
     def known(data,required_skills):
         o=[]
