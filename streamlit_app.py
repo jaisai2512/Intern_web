@@ -26,6 +26,6 @@ if user_input :
     df=df[df['Reg_no']==user_input]
     st.markdown('## Report')
     col1= st.columns(1)
-    col1.metric("Reg_No", df['Reg_no'][0])
+    col1.metric("Reg_No", df['Reg_no'])
 
    
