@@ -121,4 +121,5 @@ if user_input :
             topic=df1[df1['Topic']==j]
             st.write(topic)
         st.write('### RoadMap')
-    
+else:
+    st.write()
