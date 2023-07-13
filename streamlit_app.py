@@ -20,5 +20,6 @@ required_skills = {"Cloud Computing":{
 st.sidebar.header('Input here')
 user_input = st.sidebar.text_input("Enter Register No:")
 df=pd.read_excel('intern21.xlsx')
-df=df[df['Reg_no']==123]
+user_input=int(user_input)
+df=df[df['Reg_no']==user_input]
 st.write(df)
