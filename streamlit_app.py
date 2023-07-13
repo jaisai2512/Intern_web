@@ -23,7 +23,7 @@ df=pd.read_excel('intern21.xlsx')
 
 
 
-if(user_input != ' '):
+if user_input :
     df=df[df['Reg_no']==user_input]
     def gap_analysis(Aspiration:str,data,required_skills):
         x=[]
