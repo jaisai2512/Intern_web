@@ -24,9 +24,6 @@ if user_input :
     df=pd.read_excel('intern21.xlsx')
     user_input=int(user_input)
     df=df[df['Reg_no']==user_input]
-    st.markdown('## Report')
-    col1, col2= st.columns(2)
-    col1.metric("Name", df['Name'][0])
-    col2.metric("Reg_No", df['Reg_no'][0])
+    st.write(df)
 
    
