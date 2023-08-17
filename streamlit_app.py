@@ -39,9 +39,8 @@ if user_input :
 
     def known(data,required_skills):
         o=[]
-        for i,j in required_skills[data['Aspiration'].to_list()[0]].items():
-            st.write(i)
-            for k in data[i].to_list():
+        for i in required_skills[data['Aspiration'].to_list()[0]]:
+            for k,l in required_skills[data['Aspiration'].to_list()[0]][i].items():
                     if(',' in k):
                         o=o+k.split(',')
                     else:
